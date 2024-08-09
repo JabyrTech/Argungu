@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        cursor: cell;
+      }
+
+      button {
+        border: 1px solid #1065a5;
+        padding: 1%;
+        background-color: #1065a5;
+        color: white;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      button:hover{
+        background-color: #537e36 !important;
+        border: 1px solid #537e36 !important;
+        padding: 1.5% !important;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #1065a5;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        overflow-x: hidden;
+      }
+
+      .hero img {
+        position: absolute;
+        bottom: 0;
+        /* right: 0; */
+      }
+
+      .hero h1 {
+        width: 100%;
+        font-size: 250px;
+        /* text-align: center; */
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: #1065a5;
+        margin: 0;
+        line-height: 0.8;
+        animation: slideInFromBottom 0.5s ease-in forwards;
+      }
+      p {
+        margin: 0%;
+        line-height: 1;
+        font-size: xx-large;
+        animation: slideInFromBottom 0.5s ease-in forwards;
+      }
+
+      .rank {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+      }
+
+      @keyframes slideInFromBottom {
+        0% {
+          transform: translateY(10%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        background: #1065a5;
+        border-radius: 0 0 0 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* transform: rotate(-15deg); */
+      }
+
+      .lines {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        transform: rotate(45deg);
+      }
+
+      .lines div {
+        width: 50px;
+        height: 5px;
+        border-radius: 50px;
+        background-color: #1065a5;
+        margin: 10px 0 0 0;
+      }
+
+      .lines div:nth-child(2) {
+        width: 70px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5% 2%;
+        position: sticky;
+        top: 0;
+        background-color: #1064a5;
+        margin: 0;
+        color: white;
+        z-index: 1;
+        flex-wrap: wrap;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 30%;
+      }
+
+      nav p a {
+        text-decoration: none;
+        color: White;
+      }
+
+      nav li button {
+        background-color: white;
+        color: #1065a5;
+        padding: 10% 20%;
+        border-radius: 200px;
+        border: 1px solid white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        transition: 0.5s;
+        width: 100%;
+      }
+
+      nav li button:hover {
+        background-color: #537e36;
+        border: 1px solid #537e36;
+        color: White;
+      }
+
+      
+
+      section {
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .one {
+        background-attachment: fixed;
+        top: 0;
+        background-image: url("tandg.jpg");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .three h1 ,.two, .one h1 {
+        font-size: 300%;
+        color: white;
+        text-shadow: 2px 2px 10px black;
+        width: 80%;
+        text-align: center;
+        margin: 0;
+        line-height: 0.8;
+        animation: slideInFromBottom 0.5s ease-in forwards;
+        z-index: 0;
+      }
+
+      .one button {
+        margin-top: 50px;
+        border: 1px solid #1065a5;
+        padding: 1%;
+        background-color: #1065a5;
+        color: white;
+        cursor: pointer;
+      }
+
+      .three, .two {
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        flex-wrap: wrap;
+      }
+
+      .two {
+        height: fit-content;
+        padding: 5%;
+      }
+      .two img{
+        width: 50%;
+      }
+
+      main img {
+        border-radius: 5px;
+      }
+
+      .back {
+        border-radius:  1000px 0 0;
+        width: 100%;
+        height: 50vh;
+        z-index: -1;
+      }
+
+
+      .three {
+        background-image: url('Almajirai.webp');
+        background-attachment: fixed;
+        backdrop-filter: brightness(5);
+      }
+
+
+
+      @media (max-width: 500px) {
+        nav ul{
+          /* display: none; */
+          width: 100%;
+        }
+
+        nav p {
+          width: 100%;
+          text-align: center;
+        }
+
+        nav p a {
+          width: 100%;
+          text-align: center;
+          font-size: large;
+        }
+
+        .two img{
+          width: 80%;
+        }
+
+        .two h5 {
+          width: 100%;
+        }
+      }
+
+      .text {
+        width: 80%;
+        padding: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .text p {
+        text-shadow: none;
+        font-size: large;
+        width: 100%;
+        color: black;
+        font-weight: normal;
+
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="lines">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="circle"></div>
+      <div>
+        <p>Meet Nigeria's Youngest</p>
+        <h1>TECH CEO</h1>
+        <p style="text-align: right; width: 100%">Jabir Nasir Argungu</p>
+      </div>
+      <img
+        src="FOUNDERSCONNECT-154-removebg-preview.png"
+        alt="Jabir Nasir Argungu"
+      />
+      <div class="rank"><p>Co-founder, JIXON</p></div>
+    </section>
+    <nav id="nav">
+      <p><a href="#nav">Argungu Foundation</a></p>
+      <ul>
+        <li>Social</li>
+        <li>Contact</li>
+        <li><button>Save a dream</button></li>
+      </ul>
+    </nav>
+    <main>
+    <section class="one">
+      <h1>Don't let the dreams of your children die</h1>
+      <button>Click to Save a Dream</button>
+    </section>
+    <section class="two">
+      <h5 style="line-height: normal; text-align: left; font-size: 50px; width: 50%;"><span style="background-color: red;">29%</span> of children in NIgeria lack <span style="background-color: #537e36;"> acess to good water </span>
+      </h5>
+      <img src="goodwater.jpeg" alt="Good Water Tap">
+
+      <div class="text">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi qui omnis quo nesciunt perspiciatis ea minus tenetur quam est, aspernatur odit corporis nisi tempore quod impedit ratione quisquam dolore consequatur rerum pariatur suscipit, aliquam repellat in ipsa. Quis impedit quo a qui dicta? Quibusdam quis exercitationem amet dicta qui tempore quia minima recusandae sapiente omnis, nam voluptatem voluptate vero ex molestiae est culpa possimus iure natus, rerum sequi, nisi illo! Provident illum earum, fuga eum esse architecto dolorum tempora, corrupti optio facilis animi rem fugiat deserunt fugit voluptatibus ratione magnam. Doloremque error porro quod consequuntur dolores blanditiis dolor et incidunt voluptates dicta corrupti cum, iste voluptatum quas repudiandae reiciendis, repellat enim suscipit consequatur rerum quo eveniet odit tempore maiores. Consectetur atque illum eius at rerum, nisi perferendis id voluptas voluptatem! Ut eius repellat quibusdam rerum excepturi totam consectetur, exercitationem quisquam suscipit quos commodi dolores temporibus voluptates? Iusto modi aut harum et illum molestiae. Obcaecati, corrupti nam repellendus deleniti facilis nulla doloremque vitae necessitatibus assumenda aliquam inventore itaque similique aperiam reiciendis molestiae eius id quae. Error id maiores impedit consequatur. Quos, cumque nam aut earum illum incidunt fuga ducimus iusto recusandae dignissimos sequi tempore, explicabo, sint facilis! Accusamus tempora ut nesciunt.</p>
+      </div>
+      
+    </section>
+    <section class="three">
+      <h1 style="text-align: left;">Almajiri is also a child</h1>
+      <div class="circle"></div>
+      <div class="lines">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!-- <div class="back"></div> -->
+    </section>
+    </main>
+  </body>
+</html>
